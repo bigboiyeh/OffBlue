@@ -1,23 +1,36 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { Component } from 'react';
+import {
+    View,
+    Text,
+    AppRegistry,
+    NavigatorIOS,
+} from 'react-native';
 
-export default class App extends React.Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text>Open up App.js to start working on your app!</Text>
-        <Text>Changes you make will automatically reload.</Text>
-        <Text>Shake your phone to open the developer menu.</Text>
-      </View>
-    );
-  }
+import { Font } from 'expo'
+import MyScene from './MyScene';
+import Scene2 from './Scene2';
+
+export default class YeaBoi extends Component {
+    async componentDidMount() {
+        await Font.loadAsync({
+            'a': require('./src/fonts/FuturaSHO.otf'),
+        });
+        this.setState({ isReady: true });
+    }
+    render() {
+        return (
+            <NavigatorIOS
+                initialRoute={{
+                    title: '',
+                    component: MyScene,
+                    passProps: {index: 0},
+                }}
+                style={{flex: 1}}
+                renderScene={(route, navigator) => {
+                    <MyScene title={route.title} />
+                }}
+            />
+        );
+    }
+
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
