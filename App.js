@@ -11,12 +11,12 @@ import MyScene from './MyScene';
 import Scene2 from './Scene2';
 
 export default class YeaBoi extends Component {
-    async componentDidMount() {
-        await Font.loadAsync({
-            'a': require('./src/fonts/FuturaSHO.otf'),
-        });
-        this.setState({ isReady: true });
-    }
+    // async componentDidMount() {
+    //     await Font.loadAsync({
+    //         'a': require('./src/fonts/FuturaSHO.otf'),
+    //     });
+    //     this.setState({ isReady: true });
+    // }
     render() {
         return (
             <NavigatorIOS

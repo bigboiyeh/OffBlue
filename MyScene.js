@@ -40,16 +40,16 @@ class MyScene extends Component {
                     <Text style={styles.title}>
                         HypeBerry
                     </Text>
-                    {/* <Button
+                    <Button
                         onPress={this._onForward}
                         title="Enter the Hype"
-                    > */}
-                    <View style={styles.button}>
+                    >
+                    {/* <View style={styles.button}>
                         <Text style={this.state.isReady && styles.entry}>
                             Entry
                         </Text>
-                    </View>
-                    {/* </Button> */}
+                    </View> */}
+                    </Button>
                     <Text style={styles.description}>
                         Feel the hype, be the hype
                     </Text>
