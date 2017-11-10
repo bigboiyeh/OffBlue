@@ -65,7 +65,7 @@ class MyScene extends Component {
     _onForward() {
         this.props.navigator.push({
             component: Scene2,
-            title: 'Scene 2',
+            title: 'BlueBerry Szn',
         });
     }
 }

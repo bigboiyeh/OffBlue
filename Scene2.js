@@ -7,7 +7,7 @@ import {
   ScrollView,
   AppRegistry
 } from 'react-native';
-import Images from './src/images'
+import Images from './src/images/index'
 
 
 
